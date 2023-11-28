@@ -10,7 +10,7 @@ def multiple_letter_count(phrase):
     # letter_count = {letter:count += 1 for letter in phrase}
     freq_counter = {}
     for letter in phrase:
-        # if(freq_counter.get(letter) == None):
+        # if(freq_counter.get(letter) == None): in operator better here vs None
         #     freq_counter[letter] = 1
         # else:
         #     freq_counter[letter] += 1

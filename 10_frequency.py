@@ -11,6 +11,6 @@ def frequency(lst, search_term):
     # for num in lst:
     #     if num == search_term:
     #         sum+=1
-
-    result = sum(1 for num in lst if num == search_term)
+#no brackets in the comprehension makes a generator!
+    result = sum([1 for num in lst if num == search_term])
     return result

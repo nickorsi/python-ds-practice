@@ -10,6 +10,7 @@ def number_compare(a, b):
         >>> number_compare(1, -2)
         'First is greater'
     """
+    #if elif and else to help the reader
     if a > b:
         return "First is greater"
     if a < b:
