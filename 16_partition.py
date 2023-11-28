@@ -19,3 +19,22 @@ def partition(lst, fn):
         >>> partition(["hi", None, 6, "bye"], is_string)
         [['hi', 'bye'], [None, 6]]
     """
+
+    #[[a = items that passed], [b=items that failed]]
+    #create a sublist for passed
+    passed = [element for element in lst if fn(element)]
+    #create a sublist for fail
+    failed = [element for element in lst if not fn(element)]
+    #add the sublists to our final list and return
+    return [passed,failed]
+
+    #probably more efficient
+    # passed = []
+    # failed = []
+    # for element in lst:
+    #     if fn(element):
+    #         passed.append(element)
+    #     else:
+    #         failed.append(element)
+    # return [passed,failed]
+

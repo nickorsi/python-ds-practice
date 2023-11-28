@@ -11,3 +11,16 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    #get a count of each number
+    #return the number with the biggest count
+
+    counter = {}
+    for num in nums:
+        counter[num]= nums.count(num)
+
+    #max_count = max(counter)
+    biggest = (0,0)
+    for key, value in (counter.items()):
+        biggest = (key,value) if value > biggest[1] else biggest
+    return biggest[0]
+
